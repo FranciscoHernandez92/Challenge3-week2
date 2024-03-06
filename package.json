@@ -1,0 +1,16 @@
+{
+  "name": "challenge-3-week-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "prettier": {
+    "singleQuote": true
+  },
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "ElChiquillo",
+  "license": "ISC"
+}
