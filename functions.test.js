@@ -1,4 +1,9 @@
-import { methodLength, methodPop, methodShift } from './functions.js';
+import {
+  methodLength,
+  methodPop,
+  methodShift,
+  methodUnshift,
+} from './functions.js';
 
 describe('methodLength', () => {
   test('should be 0 when argument is []', () => {
@@ -58,6 +63,39 @@ describe('methodShift', () => {
     const expected = 'hola';
     //Act
     const r = methodShift(x);
+    //Assert
+    expect(r).toBe(expected);
+  });
+});
+
+describe('methodUnshift', () => {
+  test('should be 2 when argument the first is [] and the second [2, 8]', () => {
+    //Arrange
+    const x = [];
+    const y = [2, 8];
+    const expected = 2;
+    //Act
+    const r = methodUnshift(x, y);
+    //Assert
+    expect(r).toBe(expected);
+  });
+  test('should be 5 when argument the first is [4, 5, 6, 7] and the second [8]', () => {
+    //Arrange
+    const x = [4, 5, 6, 7];
+    const y = [8];
+    const expected = 5;
+    //Act
+    const r = methodUnshift(x, y);
+    //Assert
+    expect(r).toBe(expected);
+  });
+  test('should be 3 when argument the first is ["hola", "mundo"] and the second ["greetings:"]', () => {
+    //Arrange
+    const x = ['hola', 'mundo'];
+    const y = ['greetings:'];
+    const expected = 3;
+    //Act
+    const r = methodUnshift(x, y);
     //Assert
     expect(r).toBe(expected);
   });

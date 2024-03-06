@@ -26,3 +26,14 @@ export const methodShift = (array) => {
   array.length = array.length - 1;
   return removeElement;
 };
+
+export const methodUnshift = (array, ...n) => {
+  if (array.length === 0) {
+    return n.length;
+  }
+  const newLength = array.length + n.length;
+  for (let i = 0; i < n.length; i++) {
+    n[i] += array[i - 1];
+  }
+  return newLength;
+};
