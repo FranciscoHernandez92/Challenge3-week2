@@ -29,5 +29,8 @@
         ]
       }
     }
+  },
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.23.3"
   }
 }
